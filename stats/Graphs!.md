@@ -1,0 +1,2 @@
+# Graphs
+some graphs are better at other things than others. Like how pie charts are better at representing parts of a whole rather than the amount of different catagories. You wouldn't use a pie chart to represent the amount of people in an age group.
