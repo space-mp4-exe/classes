@@ -98,4 +98,16 @@ $$Bank customers arrive randomly on weekday afternoons at an average of 3.2 cust
 - What is the probability of having more than seven customers in a four minute interval on a weekday afternoon?
 Y = # of customers arriving in 4 min. $\lambda$ = 3.2 $\frac{customers}{4 \; min}$. $P(Y > 7) =P(Y = 8) +P(Y =9) +P(Y =10) + \dots = 1 - P(Y \leq 7) = 1-[P(Y = 0) + \dots + P(Y=7)]$$$
 1 - \left[ \frac{{3.2^0e^{-3.2}}}{0!} + \dots + \frac{{3.2^7e^{-3.2}}}{7!}\right]
+$$There where 9 accidents in 3 years
+ - What is the probability that an accident will happen next month?
+ - What is the probability that an accident will happen in the next three months?
+$Y$ = # of accidents in a month. $\lambda$ = 9 accidents / 3 years = 1/4 accident / month. 
+$$
+P(Y=0) = \frac{{\lambda^y e^{-\lambda}}}{y!} = \frac{0.25^0 e^{-0.25}}{0!}= 0.779
+$$$X$ = # of accidents in 3 months. $\lambda$ = 1/4 accidents/ month = 3/4 accidents / 3 months
+$$
+\begin{split}
+P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2) \\
+= \frac{0.75^0 e^{-0.75}}{0!} + \frac{0.75^0 e^{-0.75}}{1!} + \frac{0.75^0 e^{-0.75}}{2!}
+\end{split}
 $$
