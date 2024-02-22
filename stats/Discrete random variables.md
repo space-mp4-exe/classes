@@ -91,9 +91,10 @@ $$
 P(accept) = P(accept \mid A)P(A) + P(accept\mid B)P(B) \\
 = (0.167)(0.3) + (0.7)(0.7) = 0.54
 \end{split}
-$$Poisson distribution $\lambda$ = mean number of occurrences in that interval. $e$ = Euler
+$$**Poisson distribution**
+$\lambda$ = mean number of occurrences in that interval. $e$ = Euler
 $$
-P(Y=y) = \frac{\lambda ^{-y}e^{-\lambda}}{y!}
+P(Y=y) = \frac{\lambda ^{y}e^{-\lambda}}{y!}
 $$Bank customers arrive randomly on weekday afternoons at an average of 3.2 customers every 4 minutes. 
 - What is the probability of having more than seven customers in a four minute interval on a weekday afternoon?
 Y = # of customers arriving in 4 min. $\lambda$ = 3.2 $\frac{customers}{4 \; min}$. $P(Y > 7) =P(Y = 8) +P(Y =9) +P(Y =10) + \dots = 1 - P(Y \leq 7) = 1-[P(Y = 0) + \dots + P(Y=7)]$$$
