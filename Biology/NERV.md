@@ -15,4 +15,4 @@ So if there is higher concentration than normal, this means that the membranes a
 - **Presynaptic** - These drugs effect the synapse before the cleft, the one sending the signal. Drugs or toxins that effect this mess with the voltage-gated channels, Golgi apparatus, and the amount of $Ca^+$ outside of the neuron. 
 - **Postsynaptic** - These drugs effect the synapse after the cleft, the one receiving the signal. These drugs of toxins effect the ligand gates, inhibit or enhance acetylcholinesterase activity, or damage the mitochondria or Na/K pumps. 
 
-![[NERV-20240312140815343.webp|413]]
+![[NERV-20240312140815343.webp|414]]
