@@ -33,5 +33,29 @@ z_{0} = \frac{{\bar{y}-\mu_{0}}}{\sigma /\sqrt{ n }}
 $$This equation is essentially a $Z$ score. This is the distance from $\mu$ in terms of standard deviations. 
 Tires have some true average tread life $\mu$. A sample of 16 tires where drawn from a normal population with a $\sigma$ of 1500 miles. with 90% confidence ($\alpha$ is 0.1), we should learn when true average thread life is greater than 30000 miles. $\mu$ is 31000. 
 $$
-z_{0} = \frac{{\bar{y}-\mu_{0}}}{\sigma /\sqrt{ n }} = \frac{31000 - 30000}{1500 /\sqrt{ 16 }}
+z_{0} = \frac{{\bar{y}-\mu_{0}}}{\sigma /\sqrt{ n }} = \frac{31000 - 30000}{1500 /\sqrt{ 16 }} = 2.76
 $$
+We want 90% confidence, which would be a $z$ value of 1.96, so we reject the null hypothesis that the true average thread life is less than 30000.
+
+Ex. An engineer believes that the mean maximum snow load that will be applied on the roof of a building is less than 950 $N/m^2$. The maximum snow load was collected for each of the last 15 years, and the mean and standard deviation of this sample were 936 $\frac{N}{m^2}$ and 380 $\frac{N}{m^2}$. Use the critical value approach at 99% confidence.
+$H_{0}:\mu\geq 950$. $H_{1}:\mu< 950$. $\bar{y}=935$, $s= 380$, $n=15$. $\alpha=0.01$. $t_{14,0.01}=-2.624$.
+$$
+t_{0}=\frac{\bar{y}-\mu_{0}}{s/\sqrt{ n }} = \frac{935-950}{380/\sqrt{ 15 }} =-0.153
+$$
+Do Not Reject Null Hypothesis.
+
+$H_{0}: =$, $H_{1}: \neq$,$n=17$, $t_{0}=2.37$. we don't have a 2.37 value at a 16 degrees of freedom, so we say that the area on the tail is between 0.01 < area < 0.025. $\implies 0.02 < p-value<0.05$.
+
+A food manufacturer claims that at the time of purchase by a consumer, the average age of its product is no more than 120 days.
+$H_{0}: \mu\leq 120$, $H_{1}:\mu>120$, $\bar{y}=122.5$, $s=13.4$, $n=31$, $\alpha=0.05$. 
+$t_{0}=\frac{122.5-120}{13.4/\sqrt{ 31 }} = 1.04$. We can tell from the t table that $t_{30,0.1}$ is more than $t_{0}$. This means that we do not reject the null hypothesis.  
+The excel function is t.dist for left tail and t.dist.rt for right tail.
+
+$H_{0}:\sigma^{2}\geq 7.5^{2}$. $H_{1}: \sigma^{2}<7.5^{2}$. $n$ = 30. $s$ = 6.35. 
+$$
+\begin{split}
+\chi_{0}^{2} &= \frac{(n-1)s^{2}}{\sigma^{2}} \\
+&= \frac{(30-1)6.35^{2}}{7.5^{2}} \\
+\chi_{0}^{2} &= 20.788
+\end{split}
+$$ 

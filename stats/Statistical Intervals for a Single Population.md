@@ -1,4 +1,4 @@
-# Estimation
+	# Estimation
 we use $\bar{y}$ to represent the mean of a sample population. This is different from $\mu$ because $\mu$ is the mean of the entire population. $\bar{y}$ only represents the mean of one particular sample taken. 
 In the same way, we use $\hat{p}$ to denote the portion population. These are called *estimators*.
 ***
