@@ -118,8 +118,24 @@ The area from this test is 0.0885, but this is a two tailed test so we multiply 
 **Third exam material ends here**
 
 # Difference in Variance
-**F Distribution** - The ratio of $\chi$ variables $\frac{\chi_{1}/df_{1}}{\chi_{2}/df_{2}} \sim F_{df_{1},df_{2}}$
+**F Distribution** - The ratio of $\chi$ variables 
+$$\frac{\chi_{1}/df_{1}}{\chi_{2}/df_{2}} \sim F_{df_{1},df_{2}}$$
 Test statistic:
 $$
 F_{0} = \frac{s^{2}_{1}}{s^{2}_{2}}
 $$
+Relationship between the critical values on opposite sides of the distribution given $n_{1}-1$,$n_{2}-2$, and $\alpha$ (assuming you want a two tail distribution). Notice that on the right side of this equation that we flip the order of the degrees of freedom.
+$$
+F_{n_{1}-1,n_{2}-1,\alpha/2}=\frac{1}{F_{n_{2}-1,n_{1}-1,\alpha/2}}
+$$
+The excel function for the right tail is f.dist.rt(x,deg_free1,deg_free2). deg_free1 is the numerator. function for the left tail is f.inv(x,deg_free1,deg_free2). *Remember to switch the order of the degrees of freedom!*
+
+Ex: $H_{0}:\sigma_{1}^2=\sigma_{2}^{2}$, $n_{1}$ = 25, $n_{2}$ = 21, $s_{1}$ = 0.8241, $s_{2}$ = 0.5512, $\alpha$ = 0.1. 
+$$
+\begin{split}
+F_{0}&=\frac{s_{1}^{2}}{s_{2}^{2}} \\
+&= \frac{0.824^{2}}{0.551^{2}} \\
+&=2.24
+\end{split}
+$$
+The critical values that we have to find are $F_{24,20,0.05}$ and $F_{24,20,0.95}$. Using the table we find that $F_{24,20,0.05}$ = 2.08 and $F_{24,20,0.95}$ = $\frac{1}{F_{20,24,0.05}}$ = 0.493. The test statistic lies in the rejection region so we can say that the variance of these stocks are different from each other. 
