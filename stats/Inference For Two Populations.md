@@ -74,11 +74,68 @@ $$
 
 # Paired Samples
 In some situations, two samples are taken from the same source, or from two otherwise dependent fashion. This are kind of like before-after kind of test. eg. productivity of an operator before and after a training course, the grades of a student before and after tutoring. 
+Where $\bar{d}$ is the difference in the sample means. 
+$$
+t_{0} = \frac{\bar{d}-D_{0}}{s_{d}/\sqrt{ n }}
+$$
 
+Ex: we collect a sample of 12 operators, and we measure how long assembly takes using the standard approach and then we measure how long it takes with the new approach. Is the new approach better than the old one? $H_{0}:\mu_{d}\leq 0$. $\bar{d}$ = 4.833,$s_{d}$ = 1.764, $n$ = 12, $\alpha$ = 0.05.
+$$
+\begin{split}
+t_{0} &= \frac{\bar{d}-D_{0}}{s_{d}/\sqrt{ n }} \\
+&= \frac{4.833-0}{1.764/\sqrt{ 12 }} \\
+t_{0} &= 9.56
+\end{split}
+$$
+The biggest value in the t table on row 11 is 4.437, so the p-value is < 0.0005, so we reject $H_{0}$. The new approach is faster. From the t.dist.rt() function from excel $t_{0}$ = 5.784E-07.
+
+Ex: We have some tasks that we want to know if automated systems are faster than a human system. $H_{0}:\mu_{d}\geq 0$, $\bar{d}$ = -32.56, $s_{d}$ = 35.03, $n$ = 8.
+$$
+\begin{split}
+t_{0 }&= \frac{-32.56-0}{35.03/\sqrt{ 8 }} \\
+t_{0} &= -2.629
+\end{split}
+$$
+$t_{0.05,7}$ = -1.895. The test statistic is smaller than the critical value, so we reject $H_{0}$. The automated system is faster. 
 # Proportions
 $$
 \begin{split}
 \mu_{\hat{p}_{1}-\hat{p}_{1}} = p_{1} - p_{2} \\
-\sigma_{\hat{p}_{1}-\hat{p}_{1}}
+\sigma_{\hat{p}_{1}-\hat{p}_{1}} = \sqrt{ \frac{\hat{p}_{1}(1-\hat{p}_{1})}{n_{1}} + \frac{\hat{p}_{2}(1-\hat{p}_{2})}{n_{2}}} \\
+z_{0} = \frac{(\hat{p}_{1}-\hat{p_{2}}) - (p_{1}-p_{2})}{\sqrt{ \frac{\hat{p}_{1}(1-\hat{p}_{1})}{n_{1}} + \frac{\hat{p}_{2}(1-\hat{p}_{2})}{n_{2}}}}
 \end{split}
 $$
+Ex: We have a sample of men and women and asked if they like soda from company A or B. We want to know if the proportion of women that like soda from A is significantly different from the proportion of men that like soda from A. $H_{0}:p_{1}-p_{2}=0$. $p_{m}$ = 0.606, $n_{m}$ = 66, $p_{w}$ = 0.511, $n_{w}$ = 184.
+$$
+\begin{split}
+z_{0} &= \frac{(\hat{p}_{1}-\hat{p_{2}}) - (p_{1}-p_{2})}{\sqrt{ \frac{\hat{p}_{1}(1-\hat{p}_{1})}{n_{1}} + \frac{\hat{p}_{2}(1-\hat{p}_{2})}{n_{2}}}} \\
+&= \frac{(0.511-0.606) - (0)}{\sqrt{ \frac{0.511(1-0.511)}{184} + \frac{0.606(1-0.606)}{66}}} \\
+z_{0} &= -1.35
+\end{split}
+$$
+The area from this test is 0.0885, but this is a two tailed test so we multiply this by 2. We get 0.177. This is a lot bigger than any reasonable confidence, so we don't reject $H_{0}$.
+
+**Third exam material ends here**
+
+# Difference in Variance
+**F Distribution** - The ratio of $\chi$ variables 
+$$\frac{\chi_{1}/df_{1}}{\chi_{2}/df_{2}} \sim F_{df_{1},df_{2}}$$
+Test statistic:
+$$
+F_{0} = \frac{s^{2}_{1}}{s^{2}_{2}}
+$$
+Relationship between the critical values on opposite sides of the distribution given $n_{1}-1$,$n_{2}-2$, and $\alpha$ (assuming you want a two tail distribution). Notice that on the right side of this equation that we flip the order of the degrees of freedom.
+$$
+F_{n_{1}-1,n_{2}-1,\alpha/2}=\frac{1}{F_{n_{2}-1,n_{1}-1,\alpha/2}}
+$$
+The excel function for the right tail is f.dist.rt(x,deg_free1,deg_free2). deg_free1 is the numerator. function for the left tail is f.inv(x,deg_free1,deg_free2). *Remember to switch the order of the degrees of freedom!*
+
+Ex: $H_{0}:\sigma_{1}^2=\sigma_{2}^{2}$, $n_{1}$ = 25, $n_{2}$ = 21, $s_{1}$ = 0.8241, $s_{2}$ = 0.5512, $\alpha$ = 0.1. 
+$$
+\begin{split}
+F_{0}&=\frac{s_{1}^{2}}{s_{2}^{2}} \\
+&= \frac{0.824^{2}}{0.551^{2}} \\
+&=2.24
+\end{split}
+$$
+The critical values that we have to find are $F_{24,20,0.05}$ and $F_{24,20,0.95}$. Using the table we find that $F_{24,20,0.05}$ = 2.08 and $F_{24,20,0.95}$ = $\frac{1}{F_{20,24,0.05}}$ = 0.493. The test statistic lies in the rejection region so we can say that the variance of these stocks are different from each other. 

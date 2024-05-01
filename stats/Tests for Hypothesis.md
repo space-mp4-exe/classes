@@ -10,8 +10,6 @@ Probability of a Type II error - $\beta = P(H_{0} \; \text{is not rejected} \mid
 # Rejection Regions
 The rejection region is based on $\alpha$, our level of significance and the probability of Type I error. The rejection region is based on the probability that we reject $H_{0}$ when we shouldn't is $\alpha$. ![[Tests for Hypothesis-20240325110402199.webp]]
 
-**Exam will go over slides 5, 6, 7**
-
 # Hypothesis Testing
 There are two conditions, where $\sigma$ is known and where $\sigma$ is not known.
 You should use the normal distribution if the population is normal and under 30 or if the population is over 30. 
